@@ -76,17 +76,6 @@ Lexu is built as a **multi-package monorepo** with four core components working 
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Package Overview
-
-| Package | Role | Tech Stack |
-|---------|------|------------|
-| **lexu-electron** | Desktop connector that bridges LoL client ↔ mobile app | Electron, React, Vite, Express, Socket.IO |
-| **lexu-expo** | Mobile companion app | React Native, Expo SDK 54, Socket.IO Client, React Query |
-| **lexu-express** | Backend API for user management, versioning, and sync | Express.js, MongoDB, Mongoose, Zod |
-| **lexu-astro** | Marketing website & landing page at [lexu.gg](https://lexu.gg) | Astro, Tailwind CSS, Cloudflare Pages |
-
----
-
 ## How the Connector Works
 
 The **Lexu Connector** (lexu-electron) is the core of the system. It acts as a secure local bridge between the League of Legends client and your mobile device — no Riot account credentials are ever needed.
