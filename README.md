@@ -39,43 +39,6 @@ It works by running a lightweight **desktop connector** that bridges your League
 
 ---
 
-## Architecture
-
-Lexu is built as a **multi-package monorepo** with four core components working together:
-
-```
-┌─────────────────────────────────────────────────────────────────────────┐
-│                          LEXU ECOSYSTEM                                 │
-│                                                                         │
-│  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐              │
-│  │   lexu-astro │    │ lexu-express │    │  lexu-expo   │              │
-│  │  Landing Page│    │   Backend    │    │  Mobile App  │              │
-│  │   (Astro)    │    │  (Express)   │    │ (React Native│              │
-│  │              │    │              │    │    + Expo)   │              │
-│  └──────────────┘    └──────┬───────┘    └──────┬───────┘              │
-│                             │                    │                      │
-│                             │  Sync & Rights     │  LAN Connection      │
-│                             │                    │  (HTTP + Socket.IO)  │
-│                             │                    │                      │
-│                      ┌──────┴────────────────────┴───────┐             │
-│                      │         lexu-electron              │             │
-│                      │     Desktop Connector (Bridge)     │             │
-│                      │                                    │             │
-│                      │  ┌──────────┐  ┌───────────────┐  │             │
-│                      │  │ HTTP     │  │ Socket.IO     │  │             │
-│                      │  │ Proxy    │  │ Server        │  │             │
-│                      │  └────┬─────┘  └───────┬───────┘  │             │
-│                      │       │                │          │             │
-│                      └───────┼────────────────┼──────────┘             │
-│                              │                │                        │
-│                              ▼                ▼                        │
-│                      ┌────────────────────────────────┐               │
-│                      │    League of Legends Client     │               │
-│                      │         (LCU API)               │               │
-│                      └────────────────────────────────┘               │
-└─────────────────────────────────────────────────────────────────────────┘
-```
-
 ## How the Connector Works
 
 The **Lexu Connector** (lexu-electron) is the core of the system. It acts as a secure local bridge between the League of Legends client and your mobile device — no Riot account credentials are ever needed.
