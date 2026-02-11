@@ -51,16 +51,16 @@ The **Lexu Connector** (lexu-electron) is the core of the system. It acts as a s
  │                                                                  │
  │  ┌─────────────────────┐         ┌─────────────────────────┐    │
  │  │  League of Legends   │         │    Lexu Connector        │    │
- │  │      Client          │◄───────►│    (Electron App)        │    │
+ │  │      Client          │◄───────►│        │    │
  │  │                      │  LCU    │                           │    │
  │  │  Port: {dynamic}     │  API    │  ┌───────────────────┐   │    │
  │  │  Auth: riot:{token}  │◄──────► │  │  Local HTTP Server │   │    │
- │  │                      │  REST   │  │  Port: 42587       │   │    │
+ │  │                      │  REST   │  │   │   │    │
  │  │                      │         │  └─────────┬─────────┘   │    │
  │  │                      │  WS     │            │             │    │
  │  │                      │◄──────► │  ┌─────────┴─────────┐   │    │
  │  │                      │  Events │  │  Socket.IO Server  │   │    │
- │  └─────────────────────┘         │  │  (Real-time)       │   │    │
+ │  └─────────────────────┘         │  │    (Real-time)       │   │    │
  │                                   │  └─────────┬─────────┘   │    │
  │                                   │            │             │    │
  │                                   │      QR Code with       │    │
